@@ -38,7 +38,7 @@ def home():
 m1 = load_model('model_000000.h5')
 m2= load_model('model_001080.h5')
 @app.post('/generate')
-def generate(data : GAN):
+def generate(data):
     data=data.dict()
     if(data['type']==0):
         model=m1
