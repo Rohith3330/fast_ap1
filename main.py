@@ -62,8 +62,8 @@ def generate(data):
         "image" : my_string
     }
     return response
-m1= load_model('model_000000.h5')
-m2 = load_model('model_001080.h5')
+m1= load_model('model.h5')
+m2 = load_model('model_.h5')
 @app.post('/hi')
 def hi(data:GAN):
     data=data.dict()
