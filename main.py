@@ -36,8 +36,8 @@ def load_img2(filename):
 @app.get('/')
 def home():
     return 'hello'
-m1 = load_model('model_000000.h5')
-m2= load_model('model_001080.h5')
+m1 = load_model('model.h5')
+m2= load_model('model_.h5')
 @app.post('/generate')
 def generate(data):
     data=data.dict()
