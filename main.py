@@ -3,7 +3,7 @@ import io
 from fastapi import FastAPI
 import numpy as np
 import pandas as pd
-# from keras.models import load_model
+from keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import save_img
@@ -36,8 +36,8 @@ def load_img2(filename):
 @app.get('/')
 def home():
     return 'hello'
-m1 = tf.keras.saving.load_model('model_000000.h5')
-m2= tf.keras.saving.load_model('model_001080.h5')
+m1 = load_model('model_000000.h5')
+m2= load_model('model_001080.h5')
 @app.post('/generate')
 def generate(data):
     data=data.dict()
